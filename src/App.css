@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.table-list {
+  width: 20%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-name {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.table-name.selected {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.popup-area {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.table-box {
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  position: absolute;
+  z-index: 10;
+}
+
+.canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
 }
