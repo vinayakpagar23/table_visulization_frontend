@@ -13,18 +13,16 @@ const TableForm = () =>{
     const onFinish = async(values) => {
         console.log('Received values of form:', values);
         const response = await dispatch(insertTable(values));
-        if(code ===200){
+        if(response.payload.statusCode ===200){
             console.log("fetching Tbales     ")
             dispatch(fetchTables());
             messageAnt.success(message,3);
         }
         else{
-            messageAnt.error(message,3);
-        }
-        
+            messageAnt.error(response.payload.message,3);
+        }   
       };
   
-      
     return (
   <Form
     name="dynamic_form_nest_item"
